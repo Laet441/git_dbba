@@ -11,10 +11,8 @@ fetch('https://abcde-f2d4.restdb.io/rest/db', {
   }
 )
   .then(response => response.json())
-  .then(data => console.log(data))
+  .then(data => {
+      console.log(data)
+      document.getElementById("test-txt").innerHTML = data
+  })
   .catch(error => console.error('Error:', error));
-
-
-// 
-// console.log(process.env.API_KEY);
-// d75c9c26159a031dc3541fa74b360dd536406
